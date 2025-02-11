@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas de San Valentín</title>
+    <style>
+        body {
+            background-color: #ffccd5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #d6336c;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .card {
+            width: 150px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card.open {
+            transform: rotateY(180deg);
+        }
+        
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        
+        .front {
+            background-color: #ff99cc;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .back {
+            background-color: white;
+            color: #d6336c;
+            font-size: 18px;
+            transform: rotateY(180deg);
+            padding: 10px;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>💌 Feliz San Valentín 💌</h1>
+    <p>Te mando para taquitos haha.</p>
+    <p>Haz clic para ver un mensaje especial.</p>
+
+    <div class="container">
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Eres la persona más especial en mi vida. 💕</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">❤️</div>
+            <div class="back">Mi amor por ti crece cada día más. 😘</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💌</div>
+            <div class="back">Siempre estaré aquí para ti. Te amo. ❤️</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Gracias por mejorar mi vida. 💕</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Estoy enamorada de ti. ❤️</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Me encantas muchisisimo. 😍</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Y por ultimo... 💕</div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <div class="front">💖</div>
+            <div class="back">Eres el amor de mi vida. ❤️</div>
+        </div>
+    </div>
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>
